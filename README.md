@@ -14,12 +14,12 @@ Pjäsens färg urskiljs genom att tilldela svarta pjäser med den negativa motsv
 
 En schackbräda är representerad av en tvådimensionell vector (från biblioteket <vector>). Den är uppbyggd med en vector som innehåller åtta andra vectorer. Dessa åtta vectorer innehåller i sin tur åtta platser åt datatypen int, där pjäserna kan lagras. Schackbrädet kan därför betraktas analogt med ett verkligt schackbräde eftersom data lagras enligt en 8x8 matris (8 rader, 8 kolumner) som sammanlagt uppgår till 64 platser (brickor). En specifik position på schackbrädet kan nås genom att anropa chessBoard[r][k], vilket då returnerar int-värdet av pjäsen som befinner sig på schackbrädets position rad r, kolumn k. Exempelvis kan man anropa chessBoard[2][5] för att ta reda på vad som befinner sig på rad 2, kolumn 5. Tomma brickor har int-värdet 0. 
 
-Vanlig schacknotation använder siffrorna 1-8 för vertikal position och bokstäverna A-H för horisontell position. Sett ur perspektivet från spelaren med vita pjäser så ligger positionen A1 längst ner till vänster, medan positionen H8 ligger längst upp till höger. Detta avviker sig ifrån hur en vector fungerar, där positionen längst upp till vänster är [0][0] och positionen längst ner till höger är [7][7]. För att förtydliga koden används definitioner av raderna (ranks 1-8) och kolumnerna (files A-H) enligt följande:
+Vanlig schacknotation använder siffrorna 1-8 för vertikal position och bokstäverna A-H för horisontell position. Sett ur perspektivet från spelaren med vita pjäser så ligger positionen A1 längst ner till vänster, medan positionen H8 ligger längst upp till höger. Detta avviker sig ifrån hur en vector fungerar, vari positionen längst upp till vänster är [0][0] och positionen längst ner till höger är [7][7]. För att förtydliga koden används definitioner av raderna (ranks) 1-8 och kolumnerna (files) A-H enligt följande:
 
 * enum FILES { file_A, file_B, file_C, file_D, file_E, file_F, file_G, file_H };
 * enum RANKS { rank_8, rank_7, rank_6, rank_5, rank_4, rank_3, rank_2, rank_1 };
 
-Att skriva chessBoard[rank_1][file_A] blir då detsamma som att skriva chessBoard[7][0], vilket returnerar - liksom standardnotation - elementet längst ner till vänster.
+Att skriva chessBoard[rank_1][file_A] blir då detsamma som att skriva chessBoard[7][0], vilket returnerar - liksom standardnotationen - pjäsen längst ner till vänster.
 
 # Nomenklatur
 
