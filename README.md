@@ -12,7 +12,7 @@ Pjäsens färg urskiljs genom att tilldela svarta pjäser med den negativa motsv
 
 # Schackbräda
 
-En schackbräda är representerad av en tvådimensionell vector (från biblioteket <vector>). Den är uppbyggd med en vector som innehåller åtta andra vectorer. Dessa åtta vectorer innehåller i sin tur åtta platser åt datatypen int, där pjäserna kan lagras. Schackbrädet kan därför betraktas analogt med ett verkligt schackbräde eftersom data lagras enligt en 8x8 matris (8 rader, 8 kolumner) som sammanlagt uppgår till 64 platser (brickor). En specifik position på schackbrädet kan nås genom att anropa chessBoard[r][k], vilket då returnerar int-värdet av pjäsen som befinner sig på schackbrädets position rad r, kolumn k. Exempelvis kan man anropa chessBoard[2][5] för att ta reda på vad som befinner sig på rad 2, kolumn 5. Tomma brickor har int-värdet 0. 
+En schackbräda är representerad av en tvådimensionell vector (från biblioteket vector). Den är uppbyggd med en vector som innehåller åtta andra vectorer. Dessa åtta vectorer innehåller i sin tur åtta platser åt datatypen int, där pjäserna kan lagras. Schackbrädet kan därför betraktas analogt med ett verkligt schackbräde eftersom data lagras enligt en 8x8 matris (8 rader, 8 kolumner) som sammanlagt uppgår till 64 platser (brickor). En specifik position på schackbrädet kan nås genom att anropa chessBoard[r][k], vilket då returnerar int-värdet av pjäsen som befinner sig på schackbrädets position rad r, kolumn k. Exempelvis kan man anropa chessBoard[2][5] för att ta reda på vad som befinner sig på rad 2, kolumn 5. Tomma brickor har int-värdet 0. 
 
 Vanlig schacknotation använder siffrorna 1-8 för vertikal position och bokstäverna A-H för horisontell position. Sett ur perspektivet från spelaren med vita pjäser så ligger positionen A1 längst ner till vänster, medan positionen H8 ligger längst upp till höger. Detta avviker sig ifrån hur en vector fungerar, vari positionen längst upp till vänster är [0][0] och positionen längst ner till höger är [7][7]. För att förtydliga koden används definitioner av raderna (ranks) 1-8 och kolumnerna (files) A-H enligt följande:
 
@@ -36,7 +36,7 @@ Att skriva chessBoard[rank_1][file_A] blir då detsamma som att skriva chessBoar
 
 # Drag
 
-Drag lagras som en sträng (från biblioteket <string>). Alla drag innehåller gemensamt vilken position pjäsen kom från samt vilken position den flyttat till. Ett drag från e2 till e4 betecknas då helt enkelt e2e4. Ifall draget sker med en bonde skrivs inte pjäsen ut i draget. Annars ifall draget skett med en annan pjäs inkluderas dess bokstav innan själva förflyttningen. T.ex. ifall en löpare av vit färg flyttar sig från c1 till e3 betecknas draget Bc1c3 (vore löparen svart - bc1c3). 
+Drag lagras som en sträng (från biblioteket string). Alla drag innehåller gemensamt vilken position pjäsen kom från samt vilken position den flyttat till. Ett drag från e2 till e4 betecknas då helt enkelt e2e4. Ifall draget sker med en bonde skrivs inte pjäsen ut i draget. Annars ifall draget skett med en annan pjäs inkluderas dess bokstav innan själva förflyttningen. T.ex. ifall en löpare av vit färg flyttar sig från c1 till e3 betecknas draget Bc1c3 (vore löparen svart - bc1c3). 
 
 Ifall draget innebär ett slag mot en motståndares pjäs betecknas draget med ett suffix bestående av ett streck och bokstaven på den slagne pjäsen. T.ex. en drottning av vit färg på position f4 som slår ett torn på position f8 skulle betecknas som Qf4f8-r. 
 
