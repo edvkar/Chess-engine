@@ -1,3 +1,16 @@
+# Nomenklatur
+
+* Ply - ett drag av en spelare.
+* Tile - en bricka eller position på schackbrädet
+* P/p - bonde (stor bokstav = vit färg)
+* R/r - torn
+* N/n - häst
+* B/b - löpare
+* Q/q - drottning
+* K/k - Kung
+* Castling/rockaddrag - specialdrag för kungapjäsen
+* En passant - specialdrag för bondepjäsen
+
 # Pjäser
 
 Alla pjäser karaktäriseras av ett int-tal. De definieras enligt följande:
@@ -20,19 +33,6 @@ Vanlig schacknotation använder siffrorna 1-8 för vertikal position och bokstä
 * enum RANKS { rank_8, rank_7, rank_6, rank_5, rank_4, rank_3, rank_2, rank_1 };
 
 Att skriva chessBoard[rank_1][file_A] blir då detsamma som att skriva chessBoard[7][0], vilket returnerar - liksom standardnotationen - pjäsen längst ner till vänster.
-
-# Nomenklatur
-
-* Ply - ett drag av en spelare.
-* Tile - en bricka eller position på schackbrädet
-* P/p - bonde (stor bokstav = vit färg)
-* R/r - torn
-* N/n - häst
-* B/b - löpare
-* Q/q - drottning
-* K/k - Kung
-* Castling/rockaddrag - specialdrag för kungapjäsen
-* En passant - specialdrag för bondepjäsen
 
 # Drag
 
