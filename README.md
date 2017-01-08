@@ -52,7 +52,7 @@ En passant (https://sv.wikipedia.org/wiki/En_passant) som är ett drag som slår
 * Rockad: Kung + startposition + slutposition + "-" + förflyttningsriktning (Ke1g1-rcast)
 * En passant: startposition + slutposition + "-" + enPassant (e5f6-enPa)
 
-# Funktionen som kalkylerar drag
+# Sökfunktioner för drag
 
 Det finns tolv olika funktioner som kalkylerar alla tillåtna drag (6 olika vita pjäser och 6 olika svarta pjäser). En funktion tar ett schackbräde som en parameter eller ingång och returnerar därefter en vector som innehåller strängar av alla tillåtna drag. I funktionen används en for-loop inuti en for-loop för att leta upp positionen på pjäsen vars drag ska returneras. Därefter beräknas alla tillåtna drag genom en rad olika villkorssatser. Ifall ett drag är tillåtet skapas en sträng av lämplig beteckning som sedan läggs i vectorn som returnerar alla de tillåtna dragen.
 
